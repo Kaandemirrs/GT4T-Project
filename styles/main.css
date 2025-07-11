@@ -1466,7 +1466,10 @@
     height: 100%;
     object-fit: cover;
     display: block;
+<<<<<<< HEAD
     object-position: center top;
+=======
+>>>>>>> 9e74d3d231e428978ce9ef182871c6899b762547
   }
   .supporters__overlay {
     position: absolute;
@@ -1484,6 +1487,7 @@
     justify-content: center;
   }
   .supporters__wrapper {
+<<<<<<< HEAD
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
@@ -1505,10 +1509,28 @@
     align-items: flex-start;
     height: 170px;
     min-height: 170px;
+=======
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+    width: 100%;
+    max-width: 900px;
+  }
+  .supporter-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255,255,255,0.92);
+    border-radius: 20px;
+    padding: 32px 24px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+>>>>>>> 9e74d3d231e428978ce9ef182871c6899b762547
   }
   .supporter-item__title {
     font-family: 'Montserrat', sans-serif;
     font-size: 20px;
+<<<<<<< HEAD
     color: #222;
     margin-bottom: 12px;
     font-weight: 700;
@@ -1527,6 +1549,41 @@
     .supporters__wrapper { flex-direction: column; gap: 18px; align-items: center; }
     .supporter-item { min-width: 180px; max-width: 95vw; margin: 0; align-items: center; text-align: center; }
     .supporter-item__title { text-align: center; }
+=======
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 18px;
+  }
+  .supporter-item__logo {
+    width: 160px;
+    height: auto;
+    object-fit: contain;
+  }
+  @media (max-width: 900px) {
+    .project-details__container { flex-direction: column; gap: 24px; padding: 0 8px; }
+    .coordinator-card, .timeline-card { min-width: 220px; max-width: 100%; padding: 18px 12px; }
+    .timeline-card__title { font-size: 18px; }
+    .timeline__date, .timeline__phase { font-size: 12px; margin-bottom: 18px; margin-top: 18px; }
+    .timeline__milestone::before { width: 16px; height: 16px; border-width: 2px; }
+    .supporters { height: 180px; margin-top: 32px; }
+    .supporters__wrapper { gap: 18px; }
+    .supporter-item__title { font-size: 13px; }
+    .supporter-item__logo { width: 80px; }
+  }
+  @media (max-width: 600px) {
+    .project-details { padding: 24px 0 0 0; }
+    .project-details__container { gap: 8px; }
+    .coordinator-card, .timeline-card { padding: 8px 4px; }
+    .timeline-card__title { font-size: 13px; }
+    .timeline__date, .timeline__phase { font-size: 9px; }
+    .timeline__milestone { min-width: 40px; }
+    .timeline__milestone::before { width: 10px; height: 10px; }
+    .supporters { height: 90px; margin-top: 12px; }
+    .supporters__wrapper { gap: 4px; }
+    .supporter-item { padding: 8px 2px; border-radius: 8px; }
+    .supporter-item__title { font-size: 8px; margin-bottom: 4px; }
+    .supporter-item__logo { width: 32px; }
+>>>>>>> 9e74d3d231e428978ce9ef182871c6899b762547
   }
   
   /* --- About Main (About GT4T) --- */
@@ -2664,7 +2721,10 @@
     height: 100%;
     object-fit: cover;
     display: block;
+<<<<<<< HEAD
     object-position: center top;
+=======
+>>>>>>> 9e74d3d231e428978ce9ef182871c6899b762547
   }
   .supporters__overlay {
     position: absolute;
@@ -2683,6 +2743,7 @@
     min-height: 320px;
   }
   .supporters__wrapper {
+<<<<<<< HEAD
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
@@ -2726,6 +2787,37 @@
     .supporters__wrapper { flex-direction: column; gap: 18px; align-items: center; }
     .supporter-item { min-width: 180px; max-width: 95vw; margin: 0; align-items: center; text-align: center; }
     .supporter-item__title { text-align: center; }
+=======
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+    width: 100%;
+    max-width: 900px;
+  }
+  @media (max-width: 900px) {
+    .supporters--spaced {
+      margin-top: 32px;
+      margin-bottom: 32px;
+      padding-top: 32px;
+      padding-bottom: 32px;
+    }
+    .supporters__bg, .supporters__bg img {
+      min-height: 180px;
+    }
+    .supporters__wrapper { gap: 18px; }
+  }
+  @media (max-width: 600px) {
+    .supporters--spaced {
+      margin-top: 12px;
+      margin-bottom: 12px;
+      padding-top: 12px;
+      padding-bottom: 12px;
+    }
+    .supporters__bg, .supporters__bg img {
+      min-height: 90px;
+    }
+    .supporters__wrapper { gap: 4px; }
+>>>>>>> 9e74d3d231e428978ce9ef182871c6899b762547
   }
   
   /* Kartı daha fazla yukarı taşı */
