@@ -130,29 +130,97 @@
   font-size: 1rem;
 }
 @media (max-width: 900px) {
-  .partner-card-lg {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 16px;
+  .partners-grid {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+    padding: 0 8px !important;
   }
-  .partner-img-lg {
-    width: 120px;
-    height: 120px;
+  .partner-card, .partner-card-lg, .partner-card-large {
+    width: 100% !important;
+    max-width: 98vw !important;
+    min-width: unset !important;
+    padding: 12px 4px !important;
+    border-radius: 14px !important;
+    margin: 0 auto 10px auto !important;
+    box-sizing: border-box !important;
+  }
+  .partner-card img, .partner-card-lg img, .partner-card-large__image img {
+    width: 100% !important;
+    height: auto !important;
+    border-radius: 12px 12px 0 0 !important;
+    object-fit: cover !important;
+    display: block !important;
+  }
+  .partner-card__country, .partner-country {
+    font-size: 1rem !important;
+    padding: 4px 10px !important;
+  }
+  .partner-card__name, .partner-name, .partner-card-large__name {
+    font-size: 1.05rem !important;
+  }
+  .partner-card__description, .partner-card-large__description {
+    font-size: 0.98rem !important;
+  }
+  .partner-card-large {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 8px !important;
+    min-height: unset !important;
+  }
+  .partner-card-large__image {
+    flex-basis: 120px !important;
+    height: 120px !important;
+    width: 100% !important;
+    border-radius: 12px 12px 0 0 !important;
+    overflow: hidden !important;
+  }
+  .partner-card-large__content {
+    padding: 8px 4px !important;
+  }
+  .partner-card-large__name {
+    margin-bottom: 6px !important;
+  }
+  .partner-card-large__description {
+    margin-bottom: 6px !important;
+  }
+  .partner-card-large__link {
+    font-size: 0.9rem !important;
   }
 }
 @media (max-width: 600px) {
-  .partners-hero h1 {
-    font-size: 1.2rem;
+  .partners-grid {
+    grid-template-columns: 1fr !important;
+    gap: 8px !important;
+    padding: 0 2px !important;
   }
-  .partner-card-lg {
-    padding: 16px 4px;
+  .partner-card, .partner-card-lg, .partner-card-large {
+    padding: 6px 2px !important;
+    border-radius: 8px !important;
+    margin: 0 auto 6px auto !important;
+    max-width: 100vw !important;
+    box-sizing: border-box !important;
   }
-  .partner-info-lg h2 {
-    font-size: 1.1rem;
+  .partner-card img, .partner-card-lg img, .partner-card-large__image img {
+    border-radius: 8px 8px 0 0 !important;
   }
-  .partner-info-lg p {
-    font-size: 0.95rem;
+  .partner-card__country, .partner-country {
+    font-size: 0.8rem !important;
+    padding: 2px 6px !important;
+  }
+  .partner-card__name, .partner-name, .partner-card-large__name {
+    font-size: 0.8rem !important;
+  }
+  .partner-card__description, .partner-card-large__description {
+    font-size: 0.8rem !important;
+  }
+  .partner-card-large__name {
+    margin-bottom: 2px !important;
+  }
+  .partner-card-large__description {
+    margin-bottom: 2px !important;
+  }
+  .partner-card-large__link {
+    font-size: 0.8rem !important;
   }
 }
 /* Partners Page */
@@ -229,9 +297,54 @@
 }
 @media (max-width: 600px) {
   .partners-page { padding: 12px 0 8px 0; }
-  .partners-page__title { font-size: 1rem; margin-bottom: 10px; }
-  .partner-card-large__image { flex-basis: 100px; height: 100px; }
-  .partner-card-large__content { padding: 8px 4px 4px 4px; }
-  .partner-card-large__name { font-size: 0.85rem; }
-  .partner-card-large__description { font-size: 0.8rem; }
+  .partners-page__title {
+    font-size: 0.8rem !important;
+    margin-bottom: 6px !important;
+  }
+  .partner-card, .partner-card-lg, .partner-card-large {
+    padding: 4px 2px !important;
+    min-width: 80px !important;
+    max-width: 100% !important;
+    height: auto !important;
+    font-size: 8px !important;
+  }
+  .partner-img-lg {
+    width: 32px !important;
+    height: 32px !important;
+  }
+  .partner-card-large__name {
+    font-size: 0.7rem !important;
+    margin-bottom: 1px !important;
+  }
+  .partner-card-large__description {
+    font-size: 0.7rem !important;
+    margin-bottom: 1px !important;
+  }
+  .footer__container {
+    gap: 4px !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+  }
+  .footer__info, .footer__links {
+    align-items: center !important;
+    text-align: center !important;
+  }
+  .footer__brand {
+    font-size: 10px !important;
+  }
+  .footer__logos img {
+    height: 10px !important;
+  }
+  .footer__title {
+    font-size: 7px !important;
+  }
+  .footer__links a {
+    font-size: 6px !important;
+  }
+  img, .partner-img-lg, .footer__logo-img {
+    max-width: 100% !important;
+    height: auto !important;
+    display: block;
+  }
 } 

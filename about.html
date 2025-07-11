@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About Us - GreenTech 4 Transformation</title>
   <link rel="stylesheet" href="styles/about.css">
-  <link rel="stylesheet" href="styles/main.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Poppins:wght@500;600;700&family=Raleway:wght@400;600;700&display=swap" rel="stylesheet">
@@ -14,13 +13,13 @@
   <!-- Header -->
   <header class="header">
     <div class="header__container">
-      <div class="header__logo">GreenTech 4 Transformation</div>
+      <div class="header__logo">GreenTech4Transformation</div>
       <div class="header__sponsor-logos">
         <img src="assets/images/eit-rawmaterials.png" alt="EIT RawMaterials and EU" class="header__sponsor-logo" />
       </div>
       <nav class="header__nav">
         <ul class="header__menu">
-          <li class="header__menu-item"><a href="index3.html">Home</a></li>
+          <li class="header__menu-item"><a href="index.html">Home</a></li>
           <li class="header__menu-item"><a href="about.html">About Us</a></li>
           <li class="header__menu-item header__menu-item--partners"><a href="partners.html">Partners</a></li>
           <li class="header__menu-item"><a href="news.html">News</a></li>
@@ -29,9 +28,10 @@
       </nav>
     </div>
   </header>
-  <main>
+
+  <main id="main-content">
     <section class="about-hero about-hero--fullbg">
-      <img class="about-hero__bgimg" src="assets/images/About Us/AboutUs_Banner.png" alt="About Us Hero Background" />
+      <img class="about-hero__bgimg" src="assets/images/About Us/AboutUs_Banner.png" alt="About Us sayfası ana görseli" loading="lazy" />
       <div class="about-hero__overlay"></div>
       <div class="about-hero__main-content">
         <h1 class="about-hero__main-title">About Us</h1>
@@ -47,7 +47,7 @@
       </div>
     </section>
     <div class="about-gt4t-brief">
-      <img src="assets/icons/leaft.png" alt="Leaf Icon" class="about-gt4t-brief__icon" />
+      <img src="assets/icons/leaft.png" alt="Yaprak ikonu" class="about-gt4t-brief__icon" loading="lazy" />
       <span class="about-gt4t-brief__text">GreenTech 4 Transformation (GT4T) is a Europe-wide initiative empowering higher education institutions (HEIs) to become pioneers in sustainable innovation, entrepreneurship, and societal change.</span>
     </div>
     <!-- Misyon Kartları Bölümü -->
@@ -55,21 +55,21 @@
       <div class="container">
         <div class="about-card">
           <div class="about-card-icon">
-            <img src="assets/icons/mission.png" alt="Mission Icon" />
+            <img src="assets/icons/mission.png" alt="Misyon ikonu" loading="lazy" />
           </div>
           <h2>Mission</h2>
           <p>GT4T's mission is to strengthen the role of universities and research institutions in solving real-world challenges through circular economy strategies, clean energy transition, digital transformation, and deep-tech innovation.</p>
         </div>
         <div class="about-card">
           <div class="about-card-icon">
-            <img src="assets/icons/vision.png" alt="Vision Icon" />
+            <img src="assets/icons/vision.png" alt="Vizyon ikonu" loading="lazy" />
           </div>
           <h2>Vision</h2>
           <p>A Europe where innovation and sustainability shape a resilient, inclusive future. Our vision is to build a future where education, technology, and community-driven innovation lead the green and digital transition—locally and globally.</p>
         </div>
         <div class="about-card">
           <div class="about-card-icon">
-            <img src="assets/icons/values.png" alt="Core Values Icon" />
+            <img src="assets/icons/values.png" alt="Değerler ikonu" loading="lazy" />
           </div>
           <h2>Core Values</h2>
           <p>Collaboration, Inclusivity, Impact. GT4T believes in uniting diverse perspectives across generations and disciplines. We foster equitable access to innovation, support cross-border cooperation, and aim for scalable solutions that create long-term value for society and the environment.</p>
@@ -81,7 +81,7 @@
     <div class="standout-feature">
       <div class="standout-feature__container">
         <div class="standout-feature__bg">
-          <img src="assets/images/About Us/Group 76.png" alt="Wind Turbines" />
+          <img src="assets/images/About Us/Group 76.png" alt="Rüzgar türbinleri ve doğa" loading="lazy" />
         </div>
         <div class="feature-box">
           <h3 class="feature-box__title">Why GT4T Stands Out</h3>
@@ -97,11 +97,11 @@
       <p>GT4T is proudly supported by the EIT HEI Initiative, an EU-funded program under the European Institute of Innovation and Technology (EIT). The initiative aims to strengthen the innovation capacity of higher education institutions across Europe.</p>
       <p>Our project is guided and co-funded by EIT Climate-KIC, Europe’s leading climate innovation community. EIT Climate-KIC supports impactful partnerships, deep-tech solutions, and sustainable transformation in education, business, and policy.</p>
       <p>Thanks to this strong backing, GT4T connects top institutions and partners across Finland, Germany, Ireland, Türkiye, and the Netherlands — building a united effort for a greener and more innovative Europe.</p>
-      <img src="assets/images/EIT_RawMaterials.png" alt="Climate KIC" class="supporters-info__logo" />
+      <img src="assets/images/EIT_RawMaterials.png" alt="EIT RawMaterials ve Climate KIC logosu" class="supporters-info__logo" loading="lazy" />
     </section>
     <section class="final-logo">
       <div class="container">
-        <img src="assets/images/About Us/Climate_KIC .png" alt="Climate-KIC Logo" />
+        <img src="assets/images/About Us/Climate_KIC .png" alt="Climate-KIC Logo" loading="lazy" />
       </div>
     </section>
     <div class="about-desc">
@@ -121,21 +121,14 @@
           <a href="#" class="footer__brand">GreenTech4Transformation</a>
           <div class="footer__logos">
             <div class="footer__logos-combined">
-              <img src="assets/images/eit-rawmaterials.png" alt="EIT RawMaterials Logo" class="footer__logo-img" />
+              <img src="assets/images/eit-rawmaterials.png" alt="EIT RawMaterials ve AB logosu" class="footer__logo-img" loading="lazy" />
             </div>
-          </div>
-          <div class="footer__socials">
-            <ul>
-              <li><a href="#"><img src="assets/images/HomeScreen/instagram_icon.png" alt="Instagram" /></a></li>
-              <li><a href="#"><img src="assets/images/HomeScreen/facebook_icon.png" alt="Facebook" /></a></li>
-              <li><a href="#"><img src="assets/images/HomeScreen/icon.png" alt="Behance" /></a></li>
-            </ul>
           </div>
         </div>
         <div class="footer__links">
           <h4 class="footer__title">Pages</h4>
           <ul>
-            <li><a href="index3.html">Home</a></li>
+            <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="partners.html">Product</a></li>
             <li><a href="news.html">Blog</a></li>

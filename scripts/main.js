@@ -88,7 +88,7 @@ const reinitializeDynamicScripts = () => {
 
 // Aktif menü vurgusu için JS
 const menuMap = {
-  'index3.html': 'Home',
+  'index.html': 'Home',
   'about.html': 'About',
   'partners.html': 'Partners',
   'news.html': 'News',
@@ -152,7 +152,10 @@ document.addEventListener('DOMContentLoaded', () => {
     if (event.target.tagName === 'A') {
       event.preventDefault();
       const url = event.target.getAttribute('href');
-      if (url === window.location.pathname) {
+      if (
+        url === window.location.pathname ||
+        (url === 'index.html' && (window.location.pathname === '/' || window.location.pathname === '/index.html'))
+      ) {
         return;
       }
       switchPage(url);
@@ -174,6 +177,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // İlk yüklemede de dinamik scriptleri başlat
   reinitializeDynamicScripts();
+  const hamburger = document.getElementById('hamburger-menu');
+  const mainMenu = document.getElementById('main-menu');
+  if (hamburger && mainMenu) {
+    hamburger.addEventListener('click', () => {
+      mainMenu.classList.toggle('active');
+    });
+    hamburger.addEventListener('keypress', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        mainMenu.classList.toggle('active');
+      }
+    });
+  }
 });
 
 // Partner card Read More açılır/kapanır
@@ -188,3 +203,49 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 });
+
+// Mobil hamburger menü aç/kapat
+(function() {
+  const hamburger = document.getElementById('hamburger-menu');
+  const menu = document.getElementById('main-menu');
+  if (!hamburger || !menu) return;
+
+  // Overlay oluştur
+  let overlay = document.createElement('div');
+  overlay.id = 'menu-overlay';
+  overlay.style.position = 'fixed';
+  overlay.style.top = 0;
+  overlay.style.left = 0;
+  overlay.style.width = '100vw';
+  overlay.style.height = '100vh';
+  overlay.style.background = 'rgba(0,0,0,0.25)';
+  overlay.style.zIndex = 99;
+  overlay.style.display = 'none';
+  document.body.appendChild(overlay);
+
+  function openMenu() {
+    menu.classList.add('active');
+    overlay.style.display = 'block';
+    document.body.style.overflow = 'hidden';
+    hamburger.setAttribute('aria-expanded', 'true');
+  }
+  function closeMenu() {
+    menu.classList.remove('active');
+    overlay.style.display = 'none';
+    document.body.style.overflow = '';
+    hamburger.setAttribute('aria-expanded', 'false');
+  }
+  hamburger.addEventListener('click', function(e) {
+    if (menu.classList.contains('active')) {
+      closeMenu();
+    } else {
+      openMenu();
+    }
+  });
+  overlay.addEventListener('click', closeMenu);
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && menu.classList.contains('active')) {
+      closeMenu();
+    }
+  });
+})();
